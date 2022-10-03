@@ -45,6 +45,9 @@ public class Calculator {
             if(number1 < number2 && operation == '-'){
                 Exception e = new Exception("В римской системе нет отрицательных чисел");
                 e.printStackTrace();
+            }else if (number1 == number2 && operation == '-'){
+                Exception e = new Exception("В римской системе нет нуля");
+                e.printStackTrace();
             }else {
                 result = calculated(number1, number2, operation);
                 String RomeResult = convertNumToRoman(result - 1);
